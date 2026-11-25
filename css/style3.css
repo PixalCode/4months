@@ -1,0 +1,1 @@
+#menu{display:none}body:not(.gon) #hud,body:not(.gon) #js,body:not(.gon) #red,body:not(.gon)>canvas:first-child{visibility:hidden!important}
