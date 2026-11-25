@@ -1,2 +1,3 @@
+
 window.__tip=function(){let t=document.getElementById('gtip');if(!t){t=document.createElement('div');t.id='gtip';t.style.cssText='position:fixed;left:50%;bottom:22px;transform:translateX(-50%);z-index:55;max-width:90vw;padding:8px 16px;border-radius:14px;background:rgba(0,0,0,.6);color:#fff;font:14px/1.4 Sarabun,Mali,system-ui,sans-serif;text-align:center;pointer-events:none;transition:opacity 1s';document.body.appendChild(t)}
 t.textContent=('ontouchstart' in window&&matchMedia('(pointer:coarse)').matches)?'จอยซ้ายเดิน · ลากขวาหมุน · หากุญแจ 🔑 แล้วหาทางออก · เก็บเหรียญ 🪙 ได้ระหว่างทาง':'WASD เดิน · เมาส์หมุน · หากุญแจ 🔑 แล้วหาทางออก · เก็บเหรียญ 🪙 ได้ระหว่างทาง';t.style.opacity=1;clearTimeout(t._t);t._t=setTimeout(()=>t.style.opacity=0,6000)};

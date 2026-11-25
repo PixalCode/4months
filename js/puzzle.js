@@ -1,5 +1,6 @@
+
 (function(){
-const CODE=CONFIG.puzzle.code;
+const CODE=window.CONFIG.puzzle.code;
 const pz=document.createElement('div');pz.id='pz';
 pz.style.cssText='position:fixed;inset:0;z-index:200;background:radial-gradient(ellipse at 50% 30%,#2a1d4d 0%,#0b0818 75%);font-family:Sarabun,system-ui,sans-serif;color:#efe8ff;touch-action:none;user-select:none;-webkit-user-select:none;overflow:hidden;transition:opacity .8s';
 pz.innerHTML='<div style="position:absolute;top:'+(innerWidth<520?58:14)+'px;left:0;right:0;text-align:center;z-index:5;pointer-events:none"><div style="font-size:21px;font-weight:700;letter-spacing:.06em;text-shadow:0 0 14px #8b6cff">ตามหารหัสหน้าบ้านร้าง</div><div id="gh" style="font-size:14px;color:#b9a9e8;margin-top:6px">ลากนิ้วส่องไฟฉายหาตัวเลข 4 ตัว แล้วแตะเก็บ</div><div id="gc" style="font-size:26px;margin-top:6px;letter-spacing:.3em;font-weight:700"></div></div><div id="gw" style="position:absolute;inset:0"></div><div id="gd" style="position:absolute;inset:0;pointer-events:none;z-index:4"></div><div id="gp" style="position:absolute;inset:0;z-index:6;display:none;flex-direction:column;align-items:center;justify-content:center;gap:14px;background:rgba(8,4,20,.93)"></div><div id="gk" style="position:absolute;bottom:14px;left:0;right:0;text-align:center;font-size:12px;color:#7d70a8;cursor:pointer;z-index:7">ข้ามเกม</div>';
@@ -8,7 +9,7 @@ const gw=pz.querySelector('#gw'),gd=pz.querySelector('#gd'),gc=pz.querySelector(
 const R=Math.round(Math.max(110,Math.min(160,Math.min(innerWidth,innerHeight)*.26)));let lx=innerWidth/2,ly=innerHeight/2,got=0,done=false,slots=['_','_','_','_'];
 let sel=-1,pzLeft=3,busyF=0;
 function show(){gc.innerHTML='';slots.forEach((d,i)=>{const s=document.createElement('span');s.textContent=d;s.style.cssText='display:inline-block;width:44px;height:52px;line-height:52px;margin:0 4px;border:2px solid '+(i===sel?'#ffd84d':'rgba(190,170,255,.4)')+';border-radius:10px;background:rgba(255,255,255,.08)';s.addEventListener('pointerdown',e=>e.stopPropagation());gc.appendChild(s)})}
-const HINT=TEXTS.puzzle.hint;
+const HINT='ลากนิ้วส่องไฟหาตัวเลข (มีเลขอื่นปนอยู่ด้วย) แตะเก็บ 4 ตัวให้ถูกลำดับ ถ้าผิดต้องหาใหม่';
 function fail(){busyF=1;gh.textContent='เลขผิด! ต้องเริ่มหาใหม่…';gh.style.color='#ff6b6b';gc.style.color='#ff6b6b';tone(160,.5);setTimeout(()=>{got=0;slots=['_','_','_','_'];sel=-1;gh.style.color='';gc.style.color='';gh.textContent=HINT;show();build();busyF=0},1300)}
 function check(){if(got<4||done)return;if(slots.join('')===CODE)win();else{gh.textContent='เรียงไม่ถูก! ต้องเริ่มหาใหม่…';gh.style.color='#ff6b6b';gc.style.color='#ff6b6b';tone(160,.5);setTimeout(()=>{got=0;slots=['_','_','_','_'];sel=-1;gh.style.color='';gc.style.color='';gh.textContent=HINT;show();build()},1300)}}
 gc.style.pointerEvents='auto';gc.style.letterSpacing='0';show();
