@@ -374,7 +374,7 @@ const path=[];let c=to;while(c&&(c[0]!=from[0]||c[1]!=from[1])){path.unshift(c);
 const cell=v=>[Math.floor(v.x/S),Math.floor(v.z/S)];
 function caught(){st='dead';died=true;document.exitPointerLock&&document.exitPointerLock();const j=document.getElementById('js2');j.style.display='flex';scare.currentTime=0;scare.play();
 const rr=document.getElementById('red');rr.style.opacity=.6;
-setTimeout(()=>{j.style.display='none';rr.style.opacity=0},700);setTimeout(()=>{window.showBook(()=>window.openGacha(()=>start()))},1800)}
+setTimeout(()=>{j.style.display='none';rr.style.opacity=0},700);setTimeout(()=>{window.openGacha(()=>start())},1800)}
 function win(){st='win';document.exitPointerLock&&document.exitPointerLock();const m=document.getElementById('menu');m.querySelector('h1').textContent='หนีออกมาได้แล้ว!';m.querySelector('h1').style.color='#6fbf73';m.querySelector('p').innerHTML='คุณรอดจากบ้านร้างได้ 🎉';document.getElementById('go').textContent='เล่นอีกครั้ง';m.style.display='flex'}
 let last=performance.now(),nb=0,fk=0;
 let walkT=0;

@@ -88,7 +88,6 @@ const oc=window.coin;if(typeof oc==='function')window.coin=function(){coinOn=tru
 const og=window.__guide;if(typeof og==='function')window.__guide=function(k){if(k==='ghost')coinOn=false;return og.apply(this,arguments)};
 function detect(){
   const gz=document.getElementById('gzhost');if(gz&&gz.style.display==='block')return'gacha';
-  if(document.getElementById('bkov'))return'book';
   try{if(typeof st!=='undefined'&&st==='play'&&document.body.classList.contains('gon'))return'ghost'}catch(e){}
   if(document.getElementById('pz'))return'puz';
   if(coinOn)return'coin';return null}
