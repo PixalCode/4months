@@ -23,7 +23,7 @@ window.CONFIG = {
     // id ต้องไม่ซ้ำ, rarity ต้องตรงกับ weights
     // text เรียงตาม assets/messages/messages.txt และ author.name ตาม assets/messages/name.txt (บรรทัด 1–72)
     messages: [
-      { id: 'm0', rarity: 'N', text: "ง่วง" , author: { name: "P.Ink", image: '' } },
+      { id: 'm0', rarity: 'N', text: "ง่วง" , author: { name: "Pincool", image: '' } },
       { id: 'm1', rarity: 'N', text: "ขอให้ทุกอย่างผ่านไปด้วยดีและขอให้ทั้งคู่อยู่ด้วยกันนานๆ รักทั้งคู่ครับ💙🧡" , author: { name: "𝕰𝖃𝕮𝕷𝖀𝕯𝕴𝕹𝕲", image: '' } },
       { id: 'm2', rarity: 'N', text: "จับมือกันไว้เพื่อช่วยกันแก้ไขในทุกๆปัญหา/เป็นกำลังใจให้น้องๆทั้งสองคน" , author: { name: "Z.tanG .:.", image: '' } },
       { id: 'm3', rarity: 'N', text: "“Keep smiling and have fun playing! I’ll always be cheering you on and supporting you.”" , author: { name: "Latae\u003c3", image: '' } },
